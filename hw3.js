@@ -13,7 +13,7 @@ for(var hash = "#"; hash.length <= 7; hash += "#"){
 На каждой позиции либо пробел, либо #. 
 В результате должна получиться шахматная доска. */
 
-console.log (new Array(3).join 
+console.log (new Array(5).join 
              (new Array(5).join("# ") + "\n" + new Array(5).join(" #") + "\n")
             );
 
