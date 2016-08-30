@@ -23,8 +23,8 @@ var black = "#",
     white = " ",
     str0 = (black + white).repeat(4),
     str1 ='\u202E'+str0, // юникод: возвращает строку в перевернутом виде
-    ches = (str0 + "\n" + str1 + "\n").repeat(4);
-console.log (ches);
+    chess = (str0 + "\n" + str1 + "\n").repeat(4);
+console.log (chess);
 
 //Практика 
 
