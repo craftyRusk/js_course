@@ -13,9 +13,18 @@ for(var hash = "#"; hash.length <= 7; hash += "#"){
 На каждой позиции либо пробел, либо #. 
 В результате должна получиться шахматная доска. */
 
+//Вариант 1
 console.log (new Array(5).join 
              (new Array(5).join("# ") + "\n" + new Array(5).join(" #") + "\n")
             );
+            
+//Вариант 2
+var black = "#",
+    white = " ",
+    str0 = (black + white).repeat(4),
+    str1 ='\u202E'+str0, // юникод: возвращает строку в перевернутом виде
+    ches = (str0 + "\n" + str1 + "\n").repeat(4);
+console.log (ches);
 
 //Практика 
 
