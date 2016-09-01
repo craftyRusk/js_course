@@ -2,7 +2,7 @@
 
 //1. Сделано в дз2
 
-//2. Напишите цикл,  выводит такой треугольник
+//2. Напишите цикл, который выводит такой треугольник
 
 for(var hash = "#"; hash.length <= 7; hash += "#"){
   console.log (hash + "\n");
@@ -13,12 +13,12 @@ for(var hash = "#"; hash.length <= 7; hash += "#"){
 На каждой позиции либо пробел, либо #. 
 В результате должна получиться шахматная доска. */
 
-//Вариант 1
+//Вариант 1. Как не стоит делать :)
 console.log (new Array(5).join 
              (new Array(5).join("# ") + "\n" + new Array(5).join(" #") + "\n")
             );
             
-//Вариант 2
+//Вариант 2. И так тоже не стоит.
 var black = "#",
     white = " ",
     str0 = (black + white).repeat(4),
@@ -26,42 +26,20 @@ var black = "#",
     chess = (str0 + "\n" + str1 + "\n").repeat(4);
 console.log (chess);
 
-//Практика 
-
-var users = [
-  {
-    firstName: "Lidiya",
-    lastName: "Yakupova",
-    birthDay: "26.05.1991",
-    phones: [
-      "89040000000",
-      "83430000000"
-    ]
-  },
-  {
-    firstName: "Jack",
-    lastName: "Daniels",
-    birthDay: "01.01.1966",
-    phones: [
-      "89040000001",
-      "83430000001"
-    ]
+//Вариант 3. Шахматная доска.
+function getField (square) {
+  for (var i = 0; i < square; i++) {
+    var row = "";
+    for (var j = 0; j < square; j++) {
+      row += ((i + j) % 2 == 0) ? "[ ]" : "[#]";
+    }
+    console.log(row);
   }
-];
-
-var user = {};
-
-user.firstName = prompt ("Введите имя");
-user.lastName = prompt ("Введите фамилию");
-user.birthDay = prompt ("Введите дату рождения");
-user.phones = [];
-user.phones[0] = prompt ("Введите номер телефона");
-
-users.push(user);
-
-for (var i = 0; i < users.length; ++i) {
-  console.log("Имя: " + users[i].firstName,
-              "Фамилия: " + users[i].lastName,
-              "Дата рождения: " + users[i].birthDay,
-              "Телефоны: " + users[i].phones.join(', '));
 }
+getField (8);
+
+
+/* 
+Практика переехала в отдельный файл:
+https://github.com/craftyRusk/js_course_hw/blob/master/phonebook.js  
+*/
