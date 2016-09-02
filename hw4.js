@@ -45,13 +45,3 @@ function countChar() {
   console.log (i); 
 } 
 countChar();
-
-/* Задание 3. Не доделано.
-
-function isEven() {
-  var num = prompt ("Введите число");
-  console.log (num % 2 == 0 ? "четное" : "нечетное");
-}
-isEven();
-
-*/
